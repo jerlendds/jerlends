@@ -1,37 +1,49 @@
 <template>
-    <section>
-        <div
+    <section class="flex items-center justify-center">
+
+        <!-- <div
             v-for="article in articles"
             :key="article.id"
+            class=""
         >
-            <div class="c-dark-0 py-4 pb-0 m-2 my-6 rounded shadow-lg">
-                <h2 class="px-4 text-xl font-semibold">{{ article.title }}</h2>
-                <p class="px-4 text-sm t-white-2 py-3">{{ article.datePosted }} &#8226; {{ article.readTime }} min read</p>
-                <p class="px-4 pb-4 t-white-0">{{ article.postPreview }}...</p>
+            <div class="">
+                <h2 class="heebo">{{ article.title }}</h2>
+                <p class="heebo">{{ article.datePosted }} &#8226; {{ article.readTime }} min read</p>
+                <p class="heebo">{{ article.postPreview }}...</p>
+
                 <router-link
                     :to="'articles/' + String(article.id)"
-                    class="rounded w-full flex items-center pr-4 py-2 justify-between c-dark-4"
+                    class="rounded flex"
                 >
-                    <p class="t-green pl-4">read more</p>
-                    <font-awesome-icon
-                        class="text-lg t-green fill-current"
-                        :icon="['fas', 'chevron-right']"
-                    />
+                    <div class="flex items-center grad-1">
+                        <p class="t-white-0 pl-4 heebo font-bold">Read more</p>
+                        <font-awesome-icon
+                            class="t-white-0 text-lg fill-current"
+                            :icon="['fas', 'chevron-right']"
+                        />
+                    </div>
+
                 </router-link>
             </div>
-        </div>
+        </div> -->
+        <fade> </fade>
     </section>
 </template>
 
 <script>
+import Fade from "@/components/Fade";
+
 export default {
     name: "Articles",
+    components: {
+        fade: Fade,
+    },
     data() {
         return {
             articles: [
                 {
                     id: 0,
-                    title: "botnets and covert communication",
+                    title: "Botnets and Covert Communication",
                     datePosted: this.currentDate(),
                     readTime: 15,
                     postPreview:
@@ -39,7 +51,7 @@ export default {
                 },
                 {
                     id: 1,
-                    title: "the time I installed gentoo",
+                    title: "The time I Installed Gentoo",
                     datePosted: this.currentDate(),
                     readTime: 8,
                     postPreview:
@@ -47,7 +59,7 @@ export default {
                 },
                 {
                     id: 2,
-                    title: "first post",
+                    title: "First Post",
                     datePosted: this.currentDate(),
                     readTime: 1,
                     postPreview:
