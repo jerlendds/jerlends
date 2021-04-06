@@ -6,7 +6,7 @@
 
 <script>
 import Footer from "@/components/navigation/Footer.vue";
-import NavMenu from "@/components/navigation/Footer.vue";
+import NavMenu from "@/components/navigation/NavMenu.vue";
 
 export default {
     name: "NavigationOverlay",
