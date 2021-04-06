@@ -26,60 +26,21 @@
                 </router-link>
             </div>
         </div> -->
-        <fade> </fade>
+
     </section>
 </template>
 
 <script>
-import Fade from "@/components/Fade";
-
 export default {
     name: "Articles",
-    components: {
-        fade: Fade,
-    },
+
+    components: {},
+
     data() {
-        return {
-            articles: [
-                {
-                    id: 0,
-                    title: "Botnets and Covert Communication",
-                    datePosted: this.currentDate(),
-                    readTime: 15,
-                    postPreview:
-                        "Lorem ipsum dolor sit amet. Doloremque voluptas, officiis omnis est quo officia fugiat delectus? Iste, inventore ducimus",
-                },
-                {
-                    id: 1,
-                    title: "The time I Installed Gentoo",
-                    datePosted: this.currentDate(),
-                    readTime: 8,
-                    postPreview:
-                        "Dolor sit amet consectetur, adipisicing elit. Doloremque voluptas, officiis omnis est quo officia fugiat delectus? Iste, inventore ducimus",
-                },
-                {
-                    id: 2,
-                    title: "First Post",
-                    datePosted: this.currentDate(),
-                    readTime: 1,
-                    postPreview:
-                        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque voluptas, officiis omnis est quo officia. Amet consectetur, adipisicing elit lorem ipsum dolor sit amet",
-                },
-            ],
-        };
+        return {};
     },
 
-    methods: {
-        currentDate: function () {
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, "0");
-            var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-            var yyyy = today.getFullYear();
-
-            today = mm + "/" + dd + "/" + yyyy;
-            return today;
-        },
-    },
+    methods: {},
 };
 </script>
 
